@@ -722,3 +722,13 @@ var form = $('.contact__form'),
         }
     });
     
+
+    function showDetails() {
+        // Add your details logic here
+        console.log('Details link clicked');
+      }
+    
+      function showOrder() {
+        // Add your order logic here
+        console.log('Order link clicked');
+      }
