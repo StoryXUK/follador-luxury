@@ -5612,3 +5612,7 @@ select {
   .max-width-75 {
     margin: auto;
     max-width: 75%;}
+
+    .social-padding {
+        padding-right: 10px;
+    }
