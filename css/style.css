@@ -4030,6 +4030,7 @@ button.mfp-arrow {
 .pricing-card {
     background-color: #f8f5f0;
     margin-bottom: 30px;
+    min-height: 400px;
 }
 .pricing-card .desc {
     padding: 40px;
@@ -5616,3 +5617,38 @@ select {
     .social-padding {
         padding-right: 10px;
     }
+
+
+
+
+    /* language */
+.nav-language {
+    width: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 30px;
+}
+.nav-language i {
+    position: absolute;
+    right: 30px;
+    top: 17px;
+    font-size: 15px;
+    opacity: 0.6;
+    color: #adadad;
+}
+.nav-language select {
+    height: 50px;
+    background: transparent;
+    color: #adadad;
+    border: 1px solid #282828;
+    border-radius: 0px;
+}
+.nav-language select option {
+    color: #fff;
+}
+
+
+.min-height-exp {min-height: 350px;}
+
+.min-height-exp-body {min-height: 100px;}
