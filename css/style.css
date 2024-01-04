@@ -323,6 +323,9 @@ blockquote cite:before {
 .mt-750 {
     margin-top: 750px !important;
   }
+.mt-850 {
+    margin-top: 850px !important;
+  }
 .mb-0 {
   margin-bottom: 0 !important;
 }
@@ -402,7 +405,7 @@ blockquote cite:before {
 .owl-carousel .owl-nav button.owl-next, 
 .owl-carousel .owl-nav button.owl-prev, 
 .owl-carousel button.owl-dot {
-    outline: none;
+outline: none;
 }
 
 /* background & color */
