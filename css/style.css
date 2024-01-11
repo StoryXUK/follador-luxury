@@ -5672,6 +5672,7 @@ select {
 
 .qr-text-box {
     background-color: #ffffff;
+    color: #000;
     padding: 20px;
     border-radius: 10px;
   }
