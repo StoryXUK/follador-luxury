@@ -5668,3 +5668,10 @@ select {
 
 .min-height-exp-body {min-height: 100px;}
 
+
+
+.qr-text-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+  }
