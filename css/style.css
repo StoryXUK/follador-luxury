@@ -5578,7 +5578,7 @@ select {
     display: inline-block;
   }
 
-  .overlay {
+  .overlay-wine {
     position: absolute;
     top: 0;
     left: 0;
@@ -5599,7 +5599,7 @@ select {
     background: rgba(0, 0, 0, 0.2);
   }
 
-  .overlay a {
+  .overlay-wine a {
     margin: 5px;
     padding: 10px;
     background-color: black;
