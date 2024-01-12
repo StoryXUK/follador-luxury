@@ -732,3 +732,27 @@ var form = $('.contact__form'),
         // Add your order logic here
         console.log('Order link clicked');
       }
+
+
+
+
+
+      function showOverlay(element) {
+        var overlay = element.querySelector('.overlay-wine');
+        if (overlay) {
+            overlay.style.opacity = 1;
+        }
+    }
+    
+    function hideOverlay(element) {
+        var overlay = element.querySelector('.overlay-wine');
+        if (overlay) {
+            overlay.style.opacity = 0;
+        }
+    }
+    
+    function showDetails() {
+        // Add your logic for showing details here
+        console.log('Details clicked');
+        // You might want to open a modal or navigate to another page
+    }
