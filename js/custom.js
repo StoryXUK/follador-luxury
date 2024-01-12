@@ -756,3 +756,27 @@ var form = $('.contact__form'),
         console.log('Details clicked');
         // You might want to open a modal or navigate to another page
     }
+
+
+    // age verification
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if the user has previously verified their age
+        var ageVerified = localStorage.getItem('ageVerified');
+    
+        if (!ageVerified) {
+            // Show the age verification modal
+            var modal = document.getElementById('ageVerificationModal');
+            modal.style.display = 'flex';
+        }
+    });
+    
+    function verifyAge() {
+        // Set a flag in local storage to indicate that the user has verified their age
+        localStorage.setItem('ageVerified', 'true');
+    
+        // Close the modal
+        var modal = document.getElementById('ageVerificationModal');
+        modal.style.display = 'none';
+    }
+    
