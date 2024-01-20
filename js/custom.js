@@ -758,9 +758,12 @@ var form = $('.contact__form'),
     }
 
 
- // Function to show the age verification modal
- function showAgeVerificationModal() {
-    document.getElementById('ageVerificationModal').style.display = 'block';
+  // Function to show the age verification modal
+  function showAgeVerificationModal() {
+    // Check if the modal has been shown before
+    if (!localStorage.getItem('ageVerificationShown')) {
+        document.getElementById('ageVerificationModal').style.display = 'block';
+    }
 }
 
 // Function to hide the age verification modal
@@ -774,6 +777,9 @@ function verifyAge() {
     // For simplicity, let's assume the user is always older than 18
     alert('Age verified! You can access the website.');
     hideAgeVerificationModal();
+
+    // Set a flag in local storage to indicate that the modal has been shown
+    localStorage.setItem('ageVerificationShown', 'true');
 }
 
 // Function to decline age
