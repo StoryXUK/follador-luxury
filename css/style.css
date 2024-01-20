@@ -5692,7 +5692,7 @@ select {
     position: fixed;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     align-items: center;
@@ -5700,6 +5700,8 @@ select {
 }
 
 .modal-content {
+    margin: auto;
+    margin-top: 40vh;
     background-color: #fff;
     max-width: 300px;
     padding: 20px;
@@ -5722,3 +5724,5 @@ button {
 .max-width-400 {max-width: 400px;}
 
 .font-sm {font-size: smaller;}
+
+.color-white {color: white !important;}

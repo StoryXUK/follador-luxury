@@ -758,25 +758,30 @@ var form = $('.contact__form'),
     }
 
 
-    // age verification
+ // Function to show the age verification modal
+ function showAgeVerificationModal() {
+    document.getElementById('ageVerificationModal').style.display = 'block';
+}
 
-    document.addEventListener('DOMContentLoaded', function() {
-        // Check if the user has previously verified their age
-        var ageVerified = localStorage.getItem('ageVerified');
-    
-        if (!ageVerified) {
-            // Show the age verification modal
-            var modal = document.getElementById('ageVerificationModal');
-            modal.style.display = 'flex';
-        }
-    });
-    
-    function verifyAge() {
-        // Set a flag in local storage to indicate that the user has verified their age
-        localStorage.setItem('ageVerified', 'true');
-    
-        // Close the modal
-        var modal = document.getElementById('ageVerificationModal');
-        modal.style.display = 'none';
-    }
+// Function to hide the age verification modal
+function hideAgeVerificationModal() {
+    document.getElementById('ageVerificationModal').style.display = 'none';
+}
+
+// Function to verify age
+function verifyAge() {
+    // You can add your age verification logic here
+    // For simplicity, let's assume the user is always older than 18
+    alert('Age verified! You can access the website.');
+    hideAgeVerificationModal();
+}
+
+// Function to decline age
+function declineAge() {
+    // Redirect the user to a restricted access page
+    window.location.href = 'restricted-access.html';
+}
+
+// Call the showAgeVerificationModal function when the page loads
+window.onload = showAgeVerificationModal;
     
