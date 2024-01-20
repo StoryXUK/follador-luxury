@@ -5726,3 +5726,21 @@ button {
 .font-sm {font-size: smaller;}
 
 .color-white {color: white !important;}
+
+
+
+
+@media screen and (min-width: 768px) {
+    /* Add styles for tablets and larger screens here */
+    .element-to-hide {
+      display: block; /* or any other display property */
+    }
+  }
+  
+  /* Styles for smaller screens (phones) */
+  @media screen and (max-width: 767px) {
+    /* Hide the element on screens smaller than a tablet */
+    .element-to-hide {
+      display: none;
+    }
+  }
