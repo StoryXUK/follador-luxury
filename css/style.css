@@ -5725,8 +5725,7 @@ button {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     /* Adjust line height for tablets */
     .nutrition {
-        line-height: 14px; /* Set your desired line height for mobile devices */
-        font-size: 12px;
+        font-size: 9px;
       }
     }
   
@@ -5735,7 +5734,6 @@ button {
 @media screen and (max-width: 767px) {
     /* Adjust line height for mobile devices */
     .nutrition {
-      line-height: 12px; /* Set your desired line height for mobile devices */
       font-size: 8px;
     }
   }
