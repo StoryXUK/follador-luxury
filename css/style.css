@@ -1191,7 +1191,6 @@ color: #aa8453;
 .cappa-nav-toggle i:before,
 .cappa-nav-toggle i:after {
     background: #b19777 !important;
-    
 }
 .cappa-wrap-burger-wrap {
     position: relative;
@@ -1247,7 +1246,7 @@ color: #aa8453;
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
-    display: inline;
+    *display: inline;
     width: 20px;
     height: 1px;
     font: bold 14px/.4 Helvetica;
@@ -5159,7 +5158,7 @@ button.mfp-arrow {
 }
 .footer-explore-list li a:hover {
   padding-left: 15px;
-  color: #aa8453;
+  color: #aa8453);
 }
 .footer-explore-list li a:before {
   position: absolute;
