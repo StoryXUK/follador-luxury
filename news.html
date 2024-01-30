@@ -5,7 +5,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Follador</title>
+    <!-- description -->
+    <meta name="description" content="All the latest news from Follador">
+    <!-- keywords -->
+    <meta name="keywords"
+        content="Prosecco, Follador Prosecco, Treviso, Wine, Italy, Valdobbiadene Prosecco Superiore DOCG, Prosecco DOC Treviso, blog, news">
+    <title>Follador Prosecco | News</title>
+    <meta property="og:image" content="img/preview/teritory.jpg">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Gilda+Display&display=swap">
@@ -14,6 +24,19 @@
 </head>
 
 <body>
+    <!-- age verification -->
+    <div id="ageVerificationModal" class="modal">
+        <div class="modal-content">
+            <p>Are you 18 years or older?</p>
+            <button onclick="verifyAge()">Yes</button>
+            <button onclick="declineAge()">No</button>
+        </div>
+    </div>
+
+
+
+
+
     <!-- Preloader -->
     <div class="preloader-bg"></div>
     <div id="preloader">
@@ -27,17 +50,20 @@
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
     </div>
+
+
     <!-- Menu -->
-    <div class="cappa-wrap">
+    <nav class="cappa-wrap">
         <div class="cappa-wrap-inner">
             <nav class="cappa-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
 
-                    <li><a href="about.html">About</a></li>
+                    <!-- <li><a href="about.html">About</a></li> -->
 
 
-                    <li><a href="prosecco.html">Prosecco</a></li>
+
+                    <li><a href="all-prosecco.html">Our Wines</a></li>
 
                     <!-- <li class="cappa-menu-sub"><a href="prosecco.html">Prosecco <i class="ti-angle-down"></i></a>
                         <ul>
@@ -51,143 +77,58 @@
 
                     <li class="cappa-menu-sub"><a href="#">The Estate <i class="ti-angle-down"></i></a>
                         <ul>
-                            <li><a href="heritage.html">Heritage</a></li>
-                            <li><a href="winery.html">The Winery</a></li>
-                            
-                            <li><a href="winery.html">Vineyards</a></li>
-                            <li><a href="family.html">Follador Family</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="region.html">Region</a></li>
+
+                            <li><a href="winery.html">Winery</a></li>
+                            <!-- <li><a href="vineyards.html">Vineyards</a></li> -->
+                            <li><a href="unesco.html">UNESCO</a></li>
+
                         </ul>
                     </li>
 
-                    <li class="cappa-menu-sub"><a href="#">Experiences <i class="ti-angle-down"></i></a>
+                    <li class="cappa-menu-sub"><a href="#">Our Heritage <i class="ti-angle-down"></i></a>
                         <ul>
-                            <li><a href="experiences.html">Experiences</a></li>
-                            <li><a href="rooms.html">Stays</a></li>
+                            <li><a href="heritage.html">Heritage</a></li>
+                            <li><a href="family.html">Follador Family</a></li>
+
                         </ul>
                     </li>
+
+                    <li><a href="experiences.html">Wine Experiences</a></li>
 
                     <li class="cappa-menu-sub"><a href="#">Company <i class="ti-angle-down"></i></a>
                         <ul>
                             <li><a href="about.html">About </a></li>
-                            
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="careers.html">Careers</a></li>
-                            <li><a href="news.html">News</a></li>
                             <li><a href="sustainability.html">Sustainability </a></li>
+                            <li><a href="world.html">Around The World</a></li>
+                            <!-- <li><a href="team.html">Team</a></li> -->
+                            <!-- <li><a href="careers.html">Careers</a></li> -->
+                            <li><a href="news.html">News</a></li>
+
                         </ul>
                     </li>
 
-
-                    <li><a href="">Shop</a></li>
+                    <!-- <li><a href="news.html">News</a></li> -->
+                    <li><a target="_blank" href="https://0cfa56-3.myshopify.com/">Shop</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <!-- <div class="cappa-menu-footer">
-                <div class="reservation">
-                    <a href="tel:8551004444">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <i class="flaticon-call"></i>
-                        </div>
-                        <div class="call">Reservation<br><span>855 100 4444</span></div>
-                    </a>
-                </div>
-            </div> -->
-            <section class="cappa-menu-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="section-subtitle">The Estate</div>
-                            <!-- <div class="section-title">Image Gallery</div> -->
-                        </div>
-                        <!-- 3 columns -->
-                        <div class="col-md-4 gallery-item">
-                            <a href="img/slider/7.jpg" title="" class="img-zoom">
-                                <div class="gallery-box">
-                                    <div class="gallery-img"> <img src="img/slider/7.jpg" class="img-fluid mx-auto d-block" alt="work-img"> </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 gallery-item">
-                            <a href="img/slider/5.jpg" title="" class="img-zoom">
-                                <div class="gallery-box">
-                                    <div class="gallery-img"> <img src="img/slider/5.jpg" class="img-fluid mx-auto d-block" alt="work-img"> </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 gallery-item">
-                            <a href="img/slider/4.jpg" title="" class="img-zoom">
-                                <div class="gallery-box">
-                                    <div class="gallery-img"> <img src="img/slider/4.jpg" class="img-fluid mx-auto d-block" alt="work-img"> </div>
-                                </div>
-                            </a>
-                        </div>
 
-                        <div class="col-md-4 gallery-item">
-                            <a href="img/slider/7.jpg" title="" class="img-zoom">
-                                <div class="gallery-box">
-                                    <div class="gallery-img"> <img src="img/slider/7.jpg" class="img-fluid mx-auto d-block" alt="work-img"> </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 gallery-item">
-                            <a href="img/slider/5.jpg" title="" class="img-zoom">
-                                <div class="gallery-box">
-                                    <div class="gallery-img"> <img src="img/slider/5.jpg" class="img-fluid mx-auto d-block" alt="work-img"> </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 gallery-item">
-                            <a href="img/slider/4.jpg" title="" class="img-zoom">
-                                <div class="gallery-box">
-                                    <div class="gallery-img"> <img src="img/slider/4.jpg" class="img-fluid mx-auto d-block" alt="work-img"> </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- 2 columns -->
-                        <!-- <div class="col-md-6 gallery-item">
-                            <a href="img/slider/2.jpg" title="" class="img-zoom">
-                                <div class="gallery-box">
-                                    <div class="gallery-img"> <img src="img/slider/2.jpg" class="img-fluid mx-auto d-block" alt="work-img"> </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 gallery-item">
-                            <a href="img/slider/1.jpg" title="" class="img-zoom">
-                                <div class="gallery-box">
-                                    <div class="gallery-img"> <img src="img/slider/1.jpg" class="img-fluid mx-auto d-block" alt="work-img"> </div>
-                                </div>
-                            </a>
-                        </div> -->
-                        <!-- 3 columns -->
-                        <!-- <div class="col-md-4 gallery-item">
-                            <a href="img/rooms/8.jpg" title="" class="img-zoom">
-                                <div class="gallery-box">
-                                    <div class="gallery-img"> <img src="img/rooms/8.jpg" class="img-fluid mx-auto d-block" alt="work-img"> </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 gallery-item">
-                            <a href="img/rooms/5.jpg" title="" class="img-zoom">
-                                <div class="gallery-box">
-                                    <div class="gallery-img"> <img src="img/rooms/5.jpg" class="img-fluid mx-auto d-block" alt="work-img"> </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 gallery-item">
-                            <a href="img/rooms/10.jpg" title="" class="img-zoom">
-                                <div class="gallery-box">
-                                    <div class="gallery-img"> <img src="img/rooms/10.jpg" class="img-fluid mx-auto d-block" alt="work-img"> </div>
-                                </div>
-                            </a>
-                        </div> -->
-                    </div>
+            <section class="cappa-menu-footer">
+                <div class="nav-language"> <i class="lni ti-world"></i>
+                    <select onchange="location = this.value;">
+                        <option value="#0">Language</option>
+                        <option value="#0">English</option>
+                        <option value="https://folladorprosecco.it/">Italian</option>
+                    </select>
                 </div>
             </section>
+
         </div>
-    </div>
+    </nav>
     <!-- Logo & Menu Burger -->
-    <header class="cappa-header">
+    <div class="cappa-header">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Logo -->
@@ -199,7 +140,13 @@
                         class="cappa-nav-toggle cappa-js-cappa-nav-toggle"><i></i></a> </div>
             </div>
         </div>
-    </header>
+    </div>
+
+
+    <!-- ////////////////////////////////// Header End ////////////////////////////////// -->
+
+
+
 
     <!-- ////////////////////////////////// Header End ////////////////////////////////// -->
 
@@ -324,6 +271,29 @@
 
 
 
+    <!-- Services -->
+    <section class="services section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 p-0 animate-box" data-animate-effect="fadeInLeft">
+                    <div class="img left">
+                        <a href="poc.html"><img src="img/home/logo-poc.jpeg" alt="EU logo"></a>
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-6 p-0 animate-box" data-animate-effect="fadeInLeft">
+                    <div class="img left">
+                        <a href="poc.html"><img src="img/home/POC.png" alt="POC logo"></a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+
+
     <!-- ////////////////////////////// Footer ////////////////////////////// -->
     <footer class="footer">
         <div class="footer-top">
@@ -349,7 +319,7 @@
                             <div class="footer-language"> <i class="lni ti-world"></i>
                                 <select onchange="location = this.value;">
                                     <option value="#0">English</option>
-                                    <option value="#0">Italian</option>
+                                    <option value="https://folladorprosecco.it/">Italian</option>
                                 </select>
                             </div>
                         </div>
@@ -359,17 +329,18 @@
                             <h3 class="footer-title">Explore</h3>
                             <ul class="footer-explore-list list-unstyled">
                                 <li><a href="index.html">UNESCO</a></li>
-                                <li><a href="index.html">Sustainability</a></li>
-                                <li><a href="index.html">The Heritage</a></li>
-                                <li><a href="index.html">Media Kit</a></li>
+                                <li><a href="sustainability.html">Sustainability</a></li>
+                                <li><a href="heritage.html">The Heritage</a></li>
+                                <li><a href="media-kit.html">Media Kit</a></li>
                                 <li><a href="faq.html">FAQ's</a></li>
+                                <li><a href="site-map.html">Site Map</a></li>
 
                             </ul>
                             <h3 class="footer-title">Legal</h3>
                             <ul class="footer-explore-list list-unstyled">
-                                <li><a href="index.html">Privacy Policy</a></li>
-                                <li><a href="index.html">Terms & Conditions</a></li>
-                                <li><a href="index.html">Cookie Policy</a></li>
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms & Conditions</a></li>
+                                <li><a href="cookies.html">Cookie Policy</a></li>
 
                             </ul>
                         </div>
@@ -383,14 +354,20 @@
 
                             </p>
                             <div class="footer-contact-info">
-                                <p class="footer-contact-phone"><span class="flaticon-call"></span> +390438898222</p>
-                                <p class="footer-contact-mail"> info@folladorprosecco.com</p>
+                                <p class="footer-contact-phone"><span class="flaticon-call"></span><a
+                                        href="tel:+390438898222">+390438898222</a></p>
+                                <p class="footer-contact-mail"> <a
+                                        href="mailto:info@folladorprosecco.com">info@folladorprosecco.com</a></p>
                             </div>
                             <div class="footer-about-social-list">
-                                <a href="#"><i class="ti-instagram"></i></a>
-                                <a href="#"><i class="ti-linkedin"></i></a>
-                                <a href="#"><i class="ti-youtube"></i></a>
-                                <a href="#"><i class="ti-facebook"></i></a>
+                                <a target="_blank" href="https://www.instagram.com/proseccofollador/"><i
+                                        class="ti-instagram"></i></a>
+                                <a target="_blank" href="https://www.linkedin.com/company/follador-prosecco-dal-1769"><i
+                                        class="ti-linkedin"></i></a>
+                                <a target="_blank" href="https://www.youtube.com/channel/UCIMqqfRoUlIQ2QfezR2aN-w"><i
+                                        class="ti-youtube"></i></a>
+                                <a target="_blank" href="https://www.facebook.com/folladorprosecco"><i
+                                        class="ti-facebook"></i></a>
 
                             </div>
                         </div>
@@ -398,13 +375,15 @@
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="footer-bottom-inner">
-                            <p class="footer-bottom-copy-right">© Copyright 2024 Follodor Prosecco | Website made with
-                                &#128154; by <a href="https://story-x.co.uk/">StoryX</a></p>
+                            <p class="footer-bottom-copy-right">© Copyright 2024 Follodor Prosecco | Website made
+                                with
+                                &#9825; by <a href="https://story-x.co.uk/">StoryX</a></p>
                         </div>
                     </div>
                 </div>
