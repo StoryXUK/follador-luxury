@@ -789,5 +789,5 @@ function declineAge() {
 }
 
 // Call the showAgeVerificationModal function when the page loads
-// window.onload = showAgeVerificationModal;
+window.onload = showAgeVerificationModal;
     
