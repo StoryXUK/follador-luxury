@@ -1389,6 +1389,11 @@ hr {
     border-top: 1px solid rgba(255,255,255,0.3);
 }
 
+.class_hr {margin-top: 5px;
+    margin-bottom: 5px;
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.6) !important;}
+
 
 /* ======= Slider-fade style (Homepage Slider) ======= */
 .slider-fade .owl-item {
