@@ -758,6 +758,9 @@ var form = $('.contact__form'),
     }
 
 
+
+
+    // Age Verification
   // Function to show the age verification modal
   function showAgeVerificationModal() {
     // Check if the modal has been shown before
@@ -775,11 +778,10 @@ function hideAgeVerificationModal() {
 function verifyAge() {
     // You can add your age verification logic here
     // For simplicity, let's assume the user is always older than 18
-    alert('Age verified! You can access the website.');
-    hideAgeVerificationModal();
-
+    // Instead of showing an alert, proceed to the site
     // Set a flag in local storage to indicate that the modal has been shown
     localStorage.setItem('ageVerificationShown', 'true');
+    window.location.href = 'your_site_url';
 }
 
 // Function to decline age
@@ -790,4 +792,20 @@ function declineAge() {
 
 // Call the showAgeVerificationModal function when the page loads
 window.onload = showAgeVerificationModal;
-    
+
+
+
+
+// Navigation
+
+ // Function to include navigation from navigation.html
+ function includeNavigation() {
+    fetch('navigation.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navigation').innerHTML = data;
+        });
+}
+
+// Call includeNavigation function when the page loads
+window.onload = includeNavigation;
