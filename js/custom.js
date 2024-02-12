@@ -796,10 +796,16 @@ window.onload = showAgeVerificationModal;
 
 
 
+
+
+
+
 // Navigation
 
- // Function to include navigation from navigation.html
- function includeNavigation() {
+
+
+// Function to include navigation from navigation.html
+function includeNavigation() {
     fetch('navigation.html')
         .then(response => response.text())
         .then(data => {
@@ -807,5 +813,17 @@ window.onload = showAgeVerificationModal;
         });
 }
 
-// Call includeNavigation function when the page loads
-window.onload = includeNavigation;
+// Function to include footer from footer.html
+function includeFooter() {
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+}
+
+// Call includeNavigation and includeFooter functions when the page loads
+window.onload = function() {
+    includeNavigation();
+    includeFooter();
+};
