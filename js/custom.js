@@ -804,14 +804,7 @@ window.onload = showAgeVerificationModal;
 
 
 
-// Function to include navigation from navigation.html
-function includeNavigation() {
-    fetch('navigation.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navigation').innerHTML = data;
-        });
-}
+
 
 // Function to include footer from footer.html
 function includeFooter() {
@@ -824,6 +817,6 @@ function includeFooter() {
 
 // Call includeNavigation and includeFooter functions when the page loads
 window.onload = function() {
-    includeNavigation();
+   
     includeFooter();
 };
