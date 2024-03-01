@@ -5726,6 +5726,7 @@ button {
 .rec_img {max-width: 50px;}
 .nutrition {line-height: 20px;}
 
+.eu_img {max-width: 100px;}
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     /* Adjust line height for tablets */
@@ -5770,3 +5771,9 @@ button {
 
 
   .bullet {list-style-type: disc}
+
+
+  .logo-span img {
+    max-width: 100px;
+    height: auto; /* This ensures the image maintains its aspect ratio */
+}
