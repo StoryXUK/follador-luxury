@@ -6488,6 +6488,10 @@ button {
     max-width: 100px;
 }
 
+.poc_logo {
+    max-width: 200px;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
     /* Adjust line height for tablets */
@@ -6560,6 +6564,7 @@ button {
 }
 
 .poc_text {
-    font-size: 14px;
-    line-height: 15px;
+    font-size: 16px;
+    line-height: 18px;
 }
+
