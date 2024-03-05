@@ -820,3 +820,23 @@ window.onload = function() {
    
     includeFooter();
 };
+
+
+
+
+
+
+// Function to include footer from footer.html
+function includeFooter() {
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-news').innerHTML = data;
+        });
+}
+
+// Call includeNavigation and includeFooter functions when the page loads
+window.onload = function() {
+   
+    includeFooter();
+};
