@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<script>
-(function () {
-    // Prevent redirect loop
-    if (sessionStorage.getItem("geoRedirectDone")) return;
-
-    fetch("https://ipapi.co/json/")
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            if (data && data.country_code === "IT") {
-                sessionStorage.setItem("geoRedirectDone", "true");
-                window.location.href = "https://folladorprosecco.it/app_registration.html";
-            }
-        })
-        .catch(function () {
-            // Fail silently
-        });
-})();
-</script>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- description -->
     <meta name="description"
-        content="Discover the Follador App. From the hills of Valdobbiadene to your phone, explore exclusive content, winery experiences, tastings, recipes and wine pairings.">
+        content="Join the Follador Wine Club and enjoy exclusive privileges, reserved offers, private tastings, and a more refined way to experience Prosecco Superiore DOCG.">
+    <!-- keywords -->
     <meta name="keywords"
-        content="Follador App, Follador Prosecco, Valdobbiadene, Prosecco Superiore DOCG, winery app, wine club, wine experiences">
-    <title>Follador Prosecco | The Follador App</title>
+        content="Follador Wine Club, Follador Prosecco, Valdobbiadene, Prosecco Superiore DOCG, wine club, exclusive wine offers, winery experiences">
+    <title>Follador Prosecco | Wine Club</title>
+
     <meta property="og:image" content="img/preview/heritage.jpg">
     <meta property="og:image:type" content="image/jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+
+    <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Gilda+Display&display=swap">
@@ -60,144 +45,90 @@
     </div>
 
     <!-- Menu -->
-    <nav class="cappa-wrap">
-        <div class="cappa-wrap-inner">
-            <nav class="cappa-menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="all-prosecco.html">Our Wines</a></li>
-
-                    <li class="cappa-menu-sub"><a href="#">The Estate <i class="ti-angle-down"></i></a>
-                        <ul>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="region.html">Region</a></li>
-                            <li><a href="winery.html">Winery</a></li>
-                            <li><a href="unesco.html">UNESCO</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="cappa-menu-sub"><a href="#">Our Heritage <i class="ti-angle-down"></i></a>
-                        <ul>
-                            <li><a href="heritage.html">Heritage</a></li>
-                            <li><a href="family.html">Follador Family</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="experiences.html">Wine Experiences</a></li>
-
-                    <li class="cappa-menu-sub"><a href="#">Company <i class="ti-angle-down"></i></a>
-                        <ul>
-                            <li><a href="about.html">About </a></li>
-                            <li><a href="sustainability.html">Sustainability </a></li>
-                            <li><a href="world.html">Around The World</a></li>
-                            <li><a href="news.html">News</a></li>
-                            <li><a href="faq.html">FAQ's</a></li>
-                            <li><a href="harvest_2024.html">Harvest 2024</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a target="_blank" href="https://shop.folladorprosecco.com/">Shop</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-            <section class="cappa-menu-footer">
-                <div class="nav-language"> <i class="lni ti-world"></i>
-                    <select onchange="location = this.value;">
-                        <option value="#0">Language</option>
-                        <option value="#0">English</option>
-                        <option value="https://folladorprosecco.it">Italian</option>
-                    </select>
-                </div>
-            </section>
-        </div>
-    </nav>
-
-    <!-- Logo & Menu Burger -->
-    <div class="cappa-header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-6 col-md-6 cappa-logo-wrap">
-                    <a href="index.html" class="cappa-logo"><img src="img/logo.png" alt="Follador Logo"></a>
-                </div>
-                <div class="col-6 col-md-6 text-right cappa-wrap-burger-wrap">
-                    <a href="#" class="cappa-nav-toggle cappa-js-cappa-nav-toggle"><i></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="site-nav"></div>
 
     <!-- Slider -->
     <header class="header slider-fade">
         <div class="owl-carousel owl-theme">
+
             <div class="text-center item bg-img" data-overlay-dark="2" data-background="img/slider/3.jpg">
                 <div class="v-middle caption">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-10 offset-md-1">
-                                <h4>The Follador App</h4>
-                                <h1>From Valdobbiadene To Your Phone</h1>
+                                <h4>The Follador Wine Club</h4>
+                                <h1>Access A More Exclusive Experience</h1>
                                 <div class="butn-light mt-30 mb-30">
-                                    <a href="#app-intro"><span>Discover More</span></a>
+                                    <a href="#wine-club-intro"><span>Discover More</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="text-center item bg-img" data-overlay-dark="2" data-background="img/slider/1.jpg">
                 <div class="v-middle caption">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-10 offset-md-1">
-                                <h4>Exclusive Access To</h4>
-                                <h1>Tastings, Experiences & Pairings</h1>
+                                <h4>Reserved For Those Who Appreciate</h4>
+                                <h1>Prosecco Superiore At Its Finest</h1>
                                 <div class="butn-light mt-30 mb-30">
-                                    <a href="#features"><span>Explore</span></a>
+                                    <a href="#club-benefits"><span>Explore Privileges</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="text-center item bg-img" data-overlay-dark="2" data-background="img/slider/sustainable.jpg">
                 <div class="v-middle caption">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-10 offset-md-1">
-                                <h4>Launching Soon</h4>
-                                <h1>Join The Follador Wine Club</h1>
+                                <h4>Join Today</h4>
+                                <h1>Enjoy Exclusive Privileges</h1>
                                 <div class="butn-light mt-30 mb-30">
-                                    <a href="#wine-club"><span>Register Now</span></a>
+                                    <a href="#join-club"><span>Join The Club</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </header>
 
-    <!-- App Intro -->
-    <section id="app-intro" class="about section-padding" data-scroll-index="1">
+    <!-- Intro -->
+    <section id="wine-club-intro" class="about section-padding" data-scroll-index="1">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
                     <div class="section-subtitle">Follador</div>
-                    <div class="section-title">The Follador App</div>
+                    <div class="section-title">The Wine Club</div>
+
                     <p>
-                        From the hills of Valdobbiadene to your phone, the Follador App offers a new way to experience our world.
+                        The Follador Wine Club is an invitation to experience our world more closely —
+                        a place where our wines, our heritage, and our passion come together.
                     </p>
+
                     <p>
-                        Explore exclusive content, discover winery experiences, join live and virtual tastings, and enjoy recipes and wine pairings created to bring every bottle to life.
+                        Designed for those who appreciate quality, craftsmanship, and the elegance of
+                        Prosecco Superiore DOCG, the Wine Club offers a more personal connection to Follador.
                     </p>
+
                     <div class="butn-dark mt-20">
-                        <a href="#wine-club"><span>Register Today</span></a>
+                        <a href="#join-club"><span>Join The Wine Club</span></a>
                     </div>
                 </div>
+
                 <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp">
                     <img src="img/heritage/The Doge of Venice.jpg" alt="" class="mt-90 mb-30">
                 </div>
+
                 <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp">
                     <img src="img/heritage/cert-vert.jpg" alt="">
                 </div>
@@ -205,58 +136,79 @@
         </div>
     </section>
 
-    <!-- Features -->
-    <section id="features" class="about">
+    <!-- Benefits -->
+    <section id="club-benefits" class="about">
         <div class="container">
             <div class="row">
+
                 <div class="col col-md-5 animate-box mt-30" data-animate-effect="fadeInUp">
                     <img src="img/heritage/Gianfranco.jpg" alt="" class="mb-30">
                 </div>
+
                 <div class="col-md-7 animate-box" data-animate-effect="fadeInUp">
-                    <div class="section-subtitle">Discover</div>
-                    <div class="section-title">A More Connected Follador Experience</div>
+                    <div class="section-subtitle">Exclusive Access</div>
+                    <div class="section-title">Privileges Designed Around You</div>
+
                     <p>
-                        Designed to bring you closer to the winery, the Follador App gives you access to:
+                        As a member of the Follador Wine Club, you will enjoy a curated selection of benefits,
+                        designed to enhance every moment.
                     </p>
+
                     <p>
-                        <strong>Exclusive On-Demand Content</strong><br>
-                        Stories, insights and behind-the-scenes moments from the world of Follador.
+                        <strong>Preferential Conditions</strong><br>
+                        Up to 25% advantage on all orders.
                     </p>
+
                     <p>
-                        <strong>Winery Tours</strong><br>
-                        Plan your visit and experience the heart of Valdobbiadene in person.
+                        <strong>Exclusive Offers</strong><br>
+                        Access to reserved selections and limited releases.
                     </p>
+
                     <p>
-                        <strong>Live & Virtual Tastings</strong><br>
-                        Join guided tastings wherever you are.
+                        <strong>Invitations</strong><br>
+                        Join private tastings and curated events throughout the year.
                     </p>
+
                     <p>
-                        <strong>Recipes & Wine Pairings</strong><br>
-                        Curated ideas designed to complement every glass.
+                        <strong>Priority Access</strong><br>
+                        Be among the first to discover new vintages and collections.
                     </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join-club" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center animate-box" data-animate-effect="fadeInUp">
+                    <div class="section-subtitle">Limited Invitation</div>
+                    <div class="section-title">Complimentary Membership</div>
+
+                    <p style="max-width: 700px; margin: 0 auto 20px;">
+                        To celebrate the launch, we are offering complimentary access to the Follador Wine Club.
+                    </p>
+
+                    <p style="max-width: 700px; margin: 0 auto 30px;">
+                        Join today and enjoy a more refined way to experience Prosecco Superiore.
+                    </p>
+
+                    <div class="butn-dark">
+                        <a href="#"><span>Register Now</span></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Wine Club -->
-    <section id="wine-club" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center animate-box" data-animate-effect="fadeInUp">
-                    <div class="section-subtitle">Launching Soon</div>
-                    <div class="section-title">Register & Receive Complimentary Wine Club Membership</div>
-                    <p style="max-width: 760px; margin: 0 auto 20px;">
-                        Register through the Follador App and receive complimentary membership to the Follador Wine Club, worth €99.
-                    </p>
-                    <p style="max-width: 760px; margin: 0 auto 30px;">
-                        Enjoy exclusive offers, 25% savings on all orders, and invitations to special events.
-                    </p>
-                    <div class="butn-dark">
-                        <a href="#"><span>Scan QR Code To Register</span></a>
-                    </div>
-                </div>
-            </div>
+    <!-- Closing Line -->
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="container text-center">
+            <p style="max-width: 700px; margin: 0 auto; font-size: 18px;">
+                Because true elegance is not only tasted — it is experienced.
+            </p>
         </div>
     </section>
 
@@ -264,6 +216,7 @@
     <section class="section-padding">
         <div class="container">
             <div class="row">
+
                 <div class="col-md-4 gallery-item">
                     <a href="img/heritage/heritage_1.jpg" title="" class="img-zoom">
                         <div class="gallery-box">
@@ -273,6 +226,7 @@
                         </div>
                     </a>
                 </div>
+
                 <div class="col-md-4 gallery-item">
                     <a href="img/heritage/heritage_2.jpg" title="" class="img-zoom">
                         <div class="gallery-box">
@@ -282,6 +236,7 @@
                         </div>
                     </a>
                 </div>
+
                 <div class="col-md-4 gallery-item">
                     <a href="img/heritage/heritage_3.jpg" title="" class="img-zoom">
                         <div class="gallery-box">
@@ -291,6 +246,7 @@
                         </div>
                     </a>
                 </div>
+
             </div>
         </div>
     </section>
@@ -298,7 +254,7 @@
     <!-- Footer -->
     <div id="footer"></div>
 
-    <!-- Scripts -->
+    <!-- jQuery -->
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -318,6 +274,7 @@
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="nav.js"></script>
 </body>
 
 </html>
