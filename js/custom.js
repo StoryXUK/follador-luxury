@@ -81,8 +81,8 @@ $(function () {
     });
     
 
-    // Menu Navigation    
-    $('.cappa-js-cappa-nav-toggle').on('click', function (e) {
+    // Menu Navigation (delegated so it works when nav is injected via fetch)
+    $(document).on('click', '.cappa-js-cappa-nav-toggle', function (e) {
         var $this = $(this);
         e.preventDefault();
         if ($('body').hasClass('menu-open')) {
@@ -113,8 +113,8 @@ $(function () {
         }
     });
      
-    // Sub Menu 
-    $('.cappa-menu li.cappa-menu-sub>a').on('click', function () {
+    // Sub Menu (delegated so it works when nav is injected via fetch)
+    $(document).on('click', '.cappa-menu li.cappa-menu-sub>a', function () {
         $(this).removeAttr('href');
         var element = $(this).parent('li');
         if (element.hasClass('open')) {
