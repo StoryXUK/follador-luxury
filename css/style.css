@@ -6628,6 +6628,109 @@ button {
     width: 100%;
 }
 
+/* Home wine experience gallery */
+.experience-thumbnail-gallery {
+    padding: 0 0 120px;
+}
+
+.experience-thumbnail-heading {
+    margin: 0 auto 45px;
+    max-width: 720px;
+}
+
+.experience-thumbnail-heading p {
+    margin: 0;
+}
+
+.experience-thumbnail-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+}
+
+.experience-thumbnail {
+    aspect-ratio: 4 / 3;
+    background: #1b1b1b;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: calc((100% - 42px) / 4);
+}
+
+.experience-thumbnail::after {
+    background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.38));
+    border: 1px solid rgba(170, 132, 83, 0.38);
+    content: "";
+    inset: 0;
+    position: absolute;
+    transition: background 0.45s ease, border-color 0.45s ease;
+}
+
+.experience-thumbnail img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    width: 100%;
+}
+
+.experience-thumbnail-icon {
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    height: 42px;
+    justify-content: center;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -40%);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    width: 42px;
+    z-index: 1;
+}
+
+.experience-thumbnail:hover::after,
+.experience-thumbnail:focus::after {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(170, 132, 83, 0.9);
+}
+
+.experience-thumbnail:hover img,
+.experience-thumbnail:focus img {
+    transform: scale(1.06);
+}
+
+.experience-thumbnail:hover .experience-thumbnail-icon,
+.experience-thumbnail:focus .experience-thumbnail-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 991px) {
+    .experience-thumbnail {
+        width: calc((100% - 28px) / 3);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .experience-thumbnail-gallery {
+        padding-bottom: 90px;
+    }
+
+    .experience-thumbnail {
+        width: calc((100% - 14px) / 2);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .experience-thumbnail {
+        width: 100%;
+    }
+}
+
 /* Experience general information */
 .experience-information {
     background: #fff;
