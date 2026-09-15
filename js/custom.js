@@ -821,43 +821,39 @@ window.onload = showAgeVerificationModal;
 
 
 
-// Navigation
-
-
-
-
-
-// Function to include footer from footer.html
+// Load the shared footer on every page that provides a footer placeholder.
 function includeFooter() {
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
+    var placeholder = document.getElementById('footer');
+    if (!placeholder) return;
+
+    var customScript = document.querySelector('script[src$="js/custom.js"]');
+    var footerUrl = customScript
+        ? new URL('../footer.html', customScript.src)
+        : new URL('footer.html', window.location.href);
+
+    fetch(footerUrl)
+        .then(function (response) {
+            if (!response.ok) throw new Error('Failed to load footer.html');
+            return response.text();
+        })
+        .then(function (html) {
+            var template = document.createElement('template');
+            template.innerHTML = html.trim();
+
+            template.content.querySelectorAll('[href], [src]').forEach(function (element) {
+                ['href', 'src'].forEach(function (attribute) {
+                    var value = element.getAttribute(attribute);
+                    if (value && !/^(?:[a-z]+:|\/\/|#)/i.test(value)) {
+                        element.setAttribute(attribute, new URL(value, footerUrl).href);
+                    }
+                });
+            });
+
+            placeholder.replaceWith(template.content);
+        })
+        .catch(function (err) {
+            console.error('Footer load error:', err);
         });
 }
 
-// Call includeNavigation and includeFooter functions when the page loads
-window.onload = function() {
-   
-    includeFooter();
-};
-
-
-
-
-
-
-// Function to include footer from footer.html
-function includeFooter() {
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-news').innerHTML = data;
-        });
-}
-
-// Call includeNavigation and includeFooter functions when the page loads
-window.onload = function() {
-   
-    includeFooter();
-};
+document.addEventListener('DOMContentLoaded', includeFooter);

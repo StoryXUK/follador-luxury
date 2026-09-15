@@ -1,5 +1,6 @@
  // Function to include navigation from navigation.html
- function includeNavigation() {
+function includeNavigation() {
+    if (!document.getElementById('navigation')) return;
     fetch('navigation.html')
         .then(response => response.text())
         .then(data => {
@@ -11,15 +12,6 @@
         });
 }
 
-// Function to include footer from footer.html
-function includeFooter() {
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        });
-}
-
 // Function to include navigation.js file
 function includeNavigationJS() {
     var script = document.createElement('script');
@@ -27,8 +19,7 @@ function includeNavigationJS() {
     document.head.appendChild(script);
 }
 
-// Call includeNavigation and includeFooter functions when the page loads
-window.onload = function() {
+// Preserve the legacy navigation include without overriding other load handlers.
+window.addEventListener('load', function () {
     includeNavigation();
-    includeFooter();
-};
+});
